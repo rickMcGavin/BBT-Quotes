@@ -4,7 +4,7 @@
 
 @font-face {
 	font-family: "Proxima Nova Condensed";
-	src: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/b81e3aa4/fonts/Mark%20Simonson%20-%20Proxima%20Nova%20Condensed%20Black.otf");
+	src: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/b81e3aa4/fonts/Mark%20Simonson%20-%20Proxima%20Nova%20Condensed%20Black.otf") format("opentype");
 }
 
 
