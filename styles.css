@@ -1,3 +1,7 @@
+/*----------------------------*\
+  1. GLOBAL
+\*----------------------------*/
+
 html {
 	box-sizing: border-box;
 }
@@ -20,73 +24,189 @@ body {
   height: 100vh;
 }
 
-.quote-box {
-  background-color: #18a0ff;
-  height: 490px;
-  width: 700px;
-}
-
 .row {
 	display: flex;
 }
 
+.no-display {
+	display: none;
+}
+
+
+
+
+
+
+/*----------------------------*\
+	2. IMAGE PANEL
+\*----------------------------*/
+
+/*Sheldon: images/sheldon.png; */
 .image-container {
-	background-image: url("images/sheldon.png");
-	background-color: #282a37;
 	width: 170px;
 	height: 490px;
 	display: flex;
 	flex-direction: column;
+	transition: background-image 0.5s ease-out;
 }
+
+	.image-container--sheldon {
+		background-image: url("images/sheldon.png");
+	}
+
+	.image-container--amy {
+		background-image: url("images/amy.png");
+	}
+
+	.image-container--penny {
+		background-image: url("images/penny.png");
+	}
+
+	.image-container--howard{
+		background-image: url("images/howard.png");
+	}
+
+	.image-container--raj {
+		background-image: url("images/raj.png");
+	}
+
+	.image-container--leonard {
+		background-image: url("images/leonard.png");
+	}
 
 	.image-container__quote-marks {
 		margin-top: 60px;
 		align-items: center;
 	}
 
-
 	.image-container__arrows {
 		margin: 325px auto 0 auto;
 		cursor: pointer;
 	}
 
-.row--justify-right {
-	width: 530px;
-	justify-content: flex-end;
-	padding: 20px 20px 0 0;
+
+
+
+
+/*----------------------------*\
+	3. QUOTE PANEL
+\*----------------------------*/
+
+.quote-box {
+  height: 490px;
+  width: 700px;
+  transition: background-color 0.5s ease-out;
+	box-shadow: 0px 30px 60px 0px rgba(0,0,0, 1);
+}
+
+.quote-box--sheldon {
+	background-color: #18a0ff;
+}
+
+.quote-box--amy {
+		background-color: #1ebd7a;
+
+}
+
+.quote-box--penny {
+	background-color: #a972cc;
+}
+
+.quote-box--howard {
+	background-color: #b0aca8;
+}
+
+.quote-box--raj {
+	background-color: #6fc5d2;
+}
+
+.quote-box--leonard {
+	background-color: #bca77d;
 }
 
 .quote-container {
 	width: 530px;
 }
 
-	.quote-container__heart-body {
-		background-color: #1690E5;
-		border-radius: 40px;
-		height: 30px;
-		width: 65px;
-		display: flex;
-		align-items: center;
-		padding-left: 10px;
+/*Should likely rename this class*/
+.row--justify-right {
+	width: 530px;
+	justify-content: flex-end;
+	padding: 20px 20px 0 0;
+}
+
+.quote-container__heart-body {
+	border-radius: 40px;
+	cursor: pointer;
+	height: 30px;
+	width: 65px;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	transition: background-color 0.5s ease-out;
+}
+
+	.quote-container__heart-body--sheldon {
+		background-color: #1690e5;
 	}
 
-	.quote-container__heart-numbers {
-		color: #FFF;
-		font-family: 'Roboto', sans-serif;
-		font-size: 0.75rem;
-		line-height: 1.2;
-		margin-left: 8px;
-		margin-top: 6px;
-		align-self: baseline;
+	.quote-container__heart-body--amy {
+		background-color: #1ca568;
 	}
 
-	.quote-container__text {
-		color: #FEFFFF;
-		font-family: 'sans-serif';
-		font-size: 4.5rem;
-		padding: 15px 90px 50px 40px;
+	.quote-container__heart-body--penny {
+		background-color: #a658cf;
 	}
 
-	.quote-container__author {
-		color: #FEFFFF;
+	.quote-container__heart-body--howard {
+		background-color: #969097;
 	}
+
+	.quote-container__heart-body--raj {
+		background-color: #51b4c5;
+	}
+
+	.quote-container__heart-body--leonard {
+		background-color: #a29a79;
+	}
+
+.quote-container__heart-numbers {
+	color: #FFF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.75rem;
+	line-height: 1.2;
+	margin-left: 8px;
+	margin-top: 6px;
+	align-self: baseline;
+}
+
+.quote-container__inner {
+	transform: translateY(0);
+	opacity: 1;
+	transition: all 0.25s ease-out;
+}
+
+.quote-container__inner--animateUp {
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.quote-container__text {
+	color: #FEFFFF;
+	font-family: 'Proxima Nova Condensed';
+	font-size: 3.25rem;
+	padding: 15px 80px 10px 40px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.quote-container__author {
+	color: #FEFFFF;
+	font-size: 0.875rem;
+	font-family: 'Open Sans';
+	padding-left: 40px;
+	padding-bottom: 35px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
