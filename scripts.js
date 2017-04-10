@@ -6,7 +6,7 @@
 		{
 			quote: "Don't you think that if I were wrong, I'd know it?",
 			author: "- Sheldon Cooper",
-			textSize: "4.5rem",
+			textSize: "4rem",
 			quoteClass: "quote-box--sheldon",
 			heartClass: "quote-container__heart-body--sheldon",
 			imageClass: "image-container--sheldon",
@@ -16,7 +16,7 @@
 		{
 			quote: "If Sheldon proposed to me during sex, my ovaries would grab onto him and never let go.",
 			author: "- Amy Farrah Fowler",
-			textSize: "3.25rem",
+			textSize: "3rem",
 			quoteClass: "quote-box--amy",
 			heartClass: "quote-container__heart-body--amy",
 			imageClass: "image-container--amy",
@@ -26,7 +26,7 @@
 		{
 			quote: "I'm a vegetarian, except for fish, and the occasional steak. I LOVE steak!",
 			author: "- Penny",
-			textSize: "3.25rem",
+			textSize: "3rem",
 			quoteClass: "quote-box--penny",
 			heartClass: "quote-container__heart-body--penny",
 			imageClass: "image-container--penny",
@@ -36,7 +36,7 @@
 		{
 			quote: "I'd kill my Rabbi with a pork chop to be with your sister.",
 			author: "- Howard Wolowitz",
-			textSize: "4.25rem",
+			textSize: "3.75rem",
 			quoteClass: "quote-box--howard",
 			heartClass: "quote-container__heart-body--howard",
 			imageClass: "image-container--howard",
@@ -46,7 +46,7 @@
 		{
 			quote: "I've said this before and I'll say it again: Aquaman sucks!",
 			author: "- Raj",
-			textSize: "3.75rem",
+			textSize: "3.5rem",
 			quoteClass: "quote-box--raj",
 			heartClass: "quote-container__heart-body--raj",
 			imageClass: "image-container--raj",
@@ -56,7 +56,7 @@
 		{
 			quote: "Twelve years after high school and I'm still at the nerd table.",
 			author: "- Leonard hofstadter",
-			textSize: "3.75rem",
+			textSize: "3.5rem",
 			quoteClass: "quote-box--leonard",
 			heartClass: "quote-container__heart-body--leonard",
 			imageClass: "image-container--leonard",
