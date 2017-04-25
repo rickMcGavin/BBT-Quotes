@@ -1,7 +1,10 @@
-	// variables
+	// Block scoping the code seems to break it entirely in Safari, so they are commented out and replaced with es6 IIFE.
 
-{
-	// Array of objects with quote information
+// {
+ 
+
+(() => {
+   // array of objects to store information on each quote used in the app
 	const quotes = [
 		{
 			quote: "Don't you think that if I were wrong, I'd know it?",
@@ -64,8 +67,8 @@
 			likes: randomLikeNum()
 		}
 	]
-
-	// const and let declarations
+  
+	// const declarations for DOM elements
 	const imageContainer = document.querySelector('.image-container');
 	const leftArrow = document.querySelector('.image-container__left-arrow');
 	const rightArrow = document.querySelector('.image-container__right-arrow');
@@ -78,10 +81,11 @@
 	const likes = document.querySelector('.quote-container__heart-numbers');
 	const quoteContainerInner = document.querySelector('.quote-container__inner');
 
+  // let declaration to keep track of place in array
 	let count = 0;	
 
 
-	// listeners
+	// Event listeners
 	leftArrow.addEventListener('click', goBackOneQuote);
 	rightArrow.addEventListener('click', goForwardOneQuote);
 	heartBody.addEventListener('click', updateLikeStatus);
@@ -90,11 +94,13 @@
 	quoteContainerInner.addEventListener('transitionend', animateDown);
 
 	// functions
-
+  
+  // animate text up when user clicks arrows
 	function animateUp() {
 		quoteContainerInner.classList.add('quote-container__inner--animateUp');
 	}
-
+  
+  // when animateUp transition ends, remove the class to bring text back down
 	function animateDown(e) {
 		this.classList.remove('quote-container__inner--animateUp');
 	}
@@ -103,49 +109,53 @@
 		// change background colors for heart body and quote box
 		quoteBox.classList.add(quotes[count].quoteClass);
 		heartBody.classList.add(quotes[count].heartClass);
-		// change background image 
+		// change character photo 
 		imageContainer.classList.add(quotes[count].imageClass)
 		// load new quote
 		quoteText.textContent = quotes[count].quote;
-		// change to best font size
+		// change to best font size for quote used
 		quoteText.style.fontSize = quotes[count].textSize;
 		// load author
 		author.textContent = quotes[count].author;
+    
 		updateLikeDisplay();
 		updateLikesDisplay();
 	}
 
+  // remove character specific classes for background colors of     quoteBox, heartBody, & character photo in imageContainer
 	function removeClasses(count) {
-		// remove character specific classes for background colors of quoteBox, heartBody, & character photo in imageContainer
 		quoteBox.classList.remove(quotes[count].quoteClass);
 		heartBody.classList.remove(quotes[count].heartClass);
 		imageContainer.classList.remove(quotes[count].imageClass);
 	}
 
+  // fires when user clicks back arrow. function primarily takes user back in the quote array by one
 	function goBackOneQuote() {
 		removeClasses(count);
 		count--;
 		if (count >= 0) {
 			displayQuote();
+    // if count is less than 0 go to the end of the array
 		} else if (count < 0) {
-			// if count is less than 0 go to the end of the array
 			count = quotes.length - 1;
 			displayQuote();
 		}
 	}
 
+  // fires when user clicks forward arrow. function primarily takes the user forward in the quotes arrow by one
 	function goForwardOneQuote() {
 		removeClasses(count);
 		count++;
 		if (count < quotes.length) {
 			displayQuote();
+    // if count is greater than the number of objects in the quotes array, go to beginning of the array  
 		} else if (count > quotes.length - 1) {
-			// if count is greater than the number of objects in the quotes array, go to beginning of the array
 			count = 0;
 			displayQuote();
 		}
 	}
 
+  // fires when user clicks the heart, updates the like status of the quote in the object, then calls the function to update the display
 	function updateLikeStatus() {
 		if (quotes[count].liked) {
 			quotes[count].liked = false;
@@ -155,7 +165,8 @@
 			updateLikeDisplay();
 		}
 	}
-
+  
+  // check if this quote has been liked by the user and display the approriate heart
 	function updateLikeDisplay() {
 		if (quotes[count].liked) {
 			heartFilled.classList.remove('no-display');
@@ -168,6 +179,7 @@
 		}
 	}
 
+  // check if this quote has been liked by the user, and display the appropriate number of likes
 	function updateLikesDisplay() {
 		if (quotes[count].liked) {
 			likes.textContent = quotes[count].likes + 1;
@@ -176,11 +188,12 @@
 		}
 	}
 
-	// function to generate a random number for the likes
+	//generate a random number for initial like number value
 	function randomLikeNum() {
 	  return Math.floor(Math.random() * 999);
 	}
 	
 	displayQuote();
-}
+// }
 
+})();

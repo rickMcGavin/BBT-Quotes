@@ -47,7 +47,7 @@ body {
 	2. IMAGE PANEL
 \*----------------------------*/
 
-/*Sheldon: images/sheldon.png; */
+
 .image-container {
 	width: 170px;
 	height: 490px;
@@ -57,27 +57,27 @@ body {
 }
 
 	.image-container--sheldon {
-		background-image: url("images/sheldon.png");
+		background-image: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/02c4a7b4/images/sheldon.png");
 	}
 
 	.image-container--amy {
-		background-image: url("images/amy.png");
+		background-image: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/02c4a7b4/images/amy.png");
 	}
 
 	.image-container--penny {
-		background-image: url("images/penny.png");
+		background-image: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/02c4a7b4/images/penny.png");
 	}
 
 	.image-container--howard{
-		background-image: url("images/howard.png");
+		background-image: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/02c4a7b4/images/howard.png");
 	}
 
 	.image-container--raj {
-		background-image: url("images/raj.png");
+		background-image: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/02c4a7b4/images/raj.png");
 	}
 
 	.image-container--leonard {
-		background-image: url("images/leonard.png");
+		background-image: url("https://cdn.rawgit.com/rickMcGavin/BBT-Quotes/02c4a7b4/images/leonard.png");
 	}
 
 	.image-container__quote-marks {
@@ -86,7 +86,7 @@ body {
 	}
 
 	.image-container__arrows {
-		margin: 325px auto 0 auto;
+		margin: 325px 0 0 44px;
 		cursor: pointer;
 	}
 
@@ -134,7 +134,7 @@ body {
 	width: 530px;
 }
 
-/*Should likely rename this class*/
+
 .row--justify-right {
 	width: 530px;
 	justify-content: flex-end;
@@ -198,8 +198,8 @@ body {
 }
 
 .quote-container__text {
-	color: #FEFFFF;
-	font-family: "Proxima Nova Condensed", sans-serif;
+	color: #F5F5F5;
+	font-family: 'Proxima Nova Condensed', sans-serif;
 	font-size: 3.25rem;
 	padding: 15px 80px 10px 40px;
 	line-height: 1;
@@ -207,7 +207,7 @@ body {
 }
 
 .quote-container__author {
-	color: #FEFFFF;
+	color: #F5F5F5;
 	font-size: 0.875rem;
 	font-family: 'Open Sans';
 	padding-left: 40px;
